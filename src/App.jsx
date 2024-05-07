@@ -10,6 +10,7 @@ export default class App extends Component{
         <Contador>Alumnos</Contador>
         <Contador>Profesores</Contador>
         <Contador>Aulas</Contador>
+        <Contador>Alumnas</Contador>
       </div>
     )
   }
