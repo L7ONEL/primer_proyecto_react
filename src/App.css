@@ -1,0 +1,52 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ListaContadores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Contador {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 15px;
+  background-color: greenyellow;
+}
+
+.Titulo {
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.Valor {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Botonera {
+  display: flex;
+  flex-direction: row;
+}
+
+.Boton {
+  padding: 10px 15px;
+  width: 30px;
+  font-size: 30px;
+  font-weight: 24px;
+  margin: 10px;
+  text-align: center;
+  background-color: coral;
+  border-radius: 10px;
+  cursor: pointer;
+}
