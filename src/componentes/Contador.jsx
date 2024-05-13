@@ -29,7 +29,7 @@ export default class Contador extends Component{
       <div className='Contador'>
         <span className='Titulo'>{this.props.children}</span>
         <span className='Valor'>{this.state.valor}</span>
-        <div className='>Botonera'>
+        <div className='Botonera'>
           <Boton 
             simbolo='-'
             accion={() => this.restar()}
@@ -39,12 +39,16 @@ export default class Contador extends Component{
           accion={() => this.sumar()}
           />
           <Boton 
-          simbolo='*'
+          simbolo='* 2'
           accion={() => this.multiplicar()}
           />
           <Boton 
-          simbolo='/'
+          simbolo='/ 2'
           accion={() => this.dividir()}
+          />
+          <Boton 
+          simbolo='X'
+          accion={() => this.props.eliminar()}
           />
         </div>
       </div>
