@@ -12,10 +12,10 @@ export default class App extends Component{
     }
   }
 
-  guardar(nombre) {
+  guardar(nombre, valor) {
 
     let nuevosContadores = this.state.contadores;
-    nuevosContadores.push(nombre);
+    nuevosContadores.push({nombre: nombre, valor: valor});
 
     this.setState({contadores: nuevosContadores});
 
@@ -41,9 +41,10 @@ export default class App extends Component{
         <div className='ListaContadores'>
           {this.state.contadores.map((cont, index) => 
             <Contador 
+              valor = {cont.valor}
               key = {index}
               eliminar = {() => this.eliminar(index)}
-            >{cont}</Contador>
+            >{cont.nombre}</Contador>
           )}
         </div>
 

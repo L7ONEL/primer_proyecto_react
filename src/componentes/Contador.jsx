@@ -28,7 +28,7 @@ export default class Contador extends Component{
     return(
       <div className='Contador'>
         <span className='Titulo'>{this.props.children}</span>
-        <span className='Valor'>{this.state.valor}</span>
+        <span className='Valor'>{this.props.valor}</span>
         <div className='Botonera'>
           <Boton 
             simbolo='-'
