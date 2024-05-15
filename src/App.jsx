@@ -15,7 +15,7 @@ export default class App extends Component{
   guardar(nombre, valor) {
 
     let nuevosContadores = this.state.contadores;
-    nuevosContadores.push({nombre: nombre, valor: valor});
+    nuevosContadores.push({nombre, valor});
 
     this.setState({contadores: nuevosContadores});
 
