@@ -1,50 +1,72 @@
 import { Component } from 'react'
 import Boton from './Boton';
 
-export default class Contador extends Component{
+export default class Contador extends Component {
   constructor(props) {
     super(props);
-    this.state = { valor: 0 }
+    this.state = {
+      nombre: this.props.nombre,
+      valor: this.props.valor
+    };
   }
 
+  // componentDidMount() {
+  //   this.setState({
+  //     nombre: this.props.nombre,
+  //     valor: this.props.valor
+  //   });
+  // }
+
   restar() {
-    this.setState({valor: this.state.valor - 1});
+    this.setState(prevState => ({ valor: parseInt(prevState.valor) - 1 }));
     // NO => this.state.valor = xxxxx;
   }
 
   sumar() {
-    this.setState({valor: this.state.valor + 1});
+    this.setState(prevState => ({ valor: parseInt(prevState.valor) + 1 }));
   }
 
   multiplicar() {
-    this.setState({valor: this.state.valor * 2});
+    this.setState(prevState => ({ valor: parseInt(prevState.valor) * 2 }));
   }
 
   dividir() {
-    this.setState({valor: this.state.valor / 2});
+    this.setState(prevState => ({ valor: parseInt(prevState.valor) / 2 }));
   }
 
   render() {
     return(
       <div className='Contador'>
         <span className='Titulo'>{this.props.children}</span>
-        <span className='Valor'>{this.props.valor}</span>
+        <span className='Valor'>{this.state.valor}</span>
         <div className='Botonera'>
           <Boton 
             simbolo='-'
-            accion={() => this.restar()}
+            accion={() => {
+              this.restar();
+              this.forceUpdate();
+            }}
            />
           <Boton 
           simbolo='+'
-          accion={() => this.sumar()}
+          accion={() => {
+            this.sumar();
+            this.forceUpdate();
+          }}
           />
           <Boton 
           simbolo='* 2'
-          accion={() => this.multiplicar()}
+          accion={() => {
+            this.multiplicar();
+            this.forceUpdate();
+          }}
           />
           <Boton 
           simbolo='/ 2'
-          accion={() => this.dividir()}
+          accion={() => {
+            this.dividir();
+            this.forceUpdate();
+          }}
           />
           <Boton 
           simbolo='X'

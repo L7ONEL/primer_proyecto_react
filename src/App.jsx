@@ -35,7 +35,7 @@ export default class App extends Component{
       <div className='Contenedor'>
 
         <Formulario
-          guardar = {(nombre) => this.guardar(nombre)}
+          guardar = {(nombre, valor) => this.guardar(nombre, valor)}
         />
 
         <div className='ListaContadores'>

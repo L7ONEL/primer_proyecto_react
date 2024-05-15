@@ -6,7 +6,7 @@ export default class Formulario extends Component {
         super(props);
         this.state = {
             nombre: "",
-            valor: ""
+            valor: "",
         }
     }
 
@@ -21,8 +21,10 @@ export default class Formulario extends Component {
                     onChange={(e) => {this.setState({nombre:e.target.value})}} 
                 />
 
+                <br />
+
                 <input 
-                    type="text" 
+                    type="number" 
                     placeholder="Valor inicial"
                     value={this.state.valor}
                     onChange={(e) => {this.setState({valor:e.target.value})}}
