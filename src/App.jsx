@@ -19,20 +19,14 @@ export default class App extends Component{
 
     this.setState({contadores: nuevosContadores});
 
-    console.log(this.state.contadores);
-
   }
 
   eliminar(pos) {
 
-    console.log(pos);
-
     let nuevosContadores = this.state.contadores;
     nuevosContadores.splice(pos, 1);
-console.log(nuevosContadores);
-    this.setState({contadores: nuevosContadores});
 
-    
+    this.setState({contadores: nuevosContadores});
 
   }
 
