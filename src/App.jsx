@@ -19,14 +19,20 @@ export default class App extends Component{
 
     this.setState({contadores: nuevosContadores});
 
+    console.log(this.state.contadores);
+
   }
 
   eliminar(pos) {
 
+    console.log(pos);
+
     let nuevosContadores = this.state.contadores;
     nuevosContadores.splice(pos, 1);
-
+console.log(nuevosContadores);
     this.setState({contadores: nuevosContadores});
+
+    
 
   }
 
@@ -42,7 +48,7 @@ export default class App extends Component{
           {this.state.contadores.map((cont, index) => 
             <Contador 
               valor = {cont.valor}
-              key = {index}
+              key = {cont.nombre}
               eliminar = {() => this.eliminar(index)}
             >{cont.nombre}</Contador>
           )}
